@@ -1,0 +1,223 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+header{
+    margin-top:30px
+}
+header p{
+    color:#2a9dcc;
+    display:inline;
+    font-size:28px;
+    font-weight: 600;
+}
+.thongtin-muahang{
+    display: flex;
+    --colums:3;  
+    margin-top: 10px;
+}
+.thong-tin{
+    width: calc(100% / var(--colums));
+}
+.van-chuyen{
+    height: 300px;
+    width: calc(100% / var(--colums) - 3%);
+    margin-left: 30px;
+}
+form {
+    border: 1px solid aqua;
+    border-radius:5px;
+    margin-top: -5px;
+}
+.tan-noi{
+    margin: 20px;
+    display: flex;
+    --colums:3
+}
+.tan-noi input{
+    width: 20px;
+    height: 20px;
+    margin:3px 10px 0 0;
+}
+.tan-noi label{
+    width: calc(100% / var(--colums) + 35%);
+    font-size: 16px;
+    font-weight: 600;
+}
+.tan-noi .price{
+    width: calc(100% / var(--colums) - 35%);
+    font-weight: 600;
+    font-size: 18;
+}
+.express{
+    margin: 20px;
+    display: flex;
+    --colums:3
+}
+.express input{
+    width: 20px;
+    height: 20px; 
+    margin:3px 10px 0 0;
+}
+.express label{
+    width: calc(100% / var(--colums) + 35%);
+    font-size: 16px;
+    font-weight: 600;
+}
+.express .price{
+    width: calc(100% / var(--colums) - 35%);
+    font-weight: 600;
+    font-size: 18;
+}
+.giao-nhanh{
+    margin: 20px;
+    display: flex;
+    --colums:3
+}
+.giao-nhanh input{
+    width: 20px;
+    height: 20px;
+    margin:3px 10px 0 0;
+}
+.giao-nhanh label{
+    width: calc(100% / var(--colums) + 35%);
+    font-size: 16px;
+    font-weight: 600;
+}
+.giao-nhanh .price{
+    width: calc(100% / var(--colums) - 35%);
+    font-weight: 600;
+    font-size: 18;
+}
+.don-hang{
+    background-color: #fafafa;
+    height: 100%;
+    width: calc(100% / var(--colums) + 3%);
+    margin-left: 30px;
+}
+.don-hang .san-pham{
+    display: flex;
+    --colums:3;
+    margin: 20px;
+}
+.don-hang .san-pham-img{
+    border-radius: 10px;
+    width: calc(100% / var(--colums) - 20%);
+    height: 50px;
+    margin-right: 10px;
+}
+.don-hang .san-pham-img img{
+   width: 100%;
+   height: 100%;
+}
+.don-hang .san-pham-name{
+    width: calc(100% / var(--colums) + 34%);
+}
+.don-hang .san-pham-price{
+    width: calc(100% / var(--colums) - 14%);
+    color:#717171;
+    font-size:14px;
+    font-weight: 600;
+}
+.don-hang .giam-gia{
+    display: flex;
+    margin: 20px;
+}
+.don-hang .giam-gia input{
+    margin-right: 15px;
+    height: 43px;
+}
+.tong-tien{
+    margin: 20px;
+}
+.tong-tien .tam-tinh{
+    display: flex;
+    justify-content: space-between;
+}
+.tong-tien .tam-tinh p{
+    color:#717171;
+    font-weight: 600;
+}
+.tong-tien .phi-van-chuyen{
+    display: flex;
+    justify-content: space-between;
+    margin-top: -10px;
+}
+.tong-tien .phi-van-chuyen p{
+    color:#717171;
+    font-weight: 600;
+}
+.tong-thanh-toan{
+    margin: 20px;
+}
+.tong-thanh-toan .total{
+    display: flex;
+    justify-content: space-between;
+}
+.tong-thanh-toan .total-left{
+    color:#717171;
+    font-size: 18px;
+    font-weight: 600;
+}
+.tong-thanh-toan .total-right{
+    color:#2a9dcc;
+    font-size: 21px;
+    font-weight: 700
+}
+
+.form-group input{
+    height: 40px;
+}
+.form-group #note{
+    height: 50px;
+}
+.form-message{
+    color: chocolate;
+}
+@media (max-width: 1023px){
+    .thongtin-muahang{
+        flex-direction: column !important;;
+         --colums:1;
+        
+    }
+    .thong-tin{
+        width: calc(60% / var(--colums));
+        margin:auto;
+        order:2
+        
+    }
+    .van-chuyen{
+        width: calc(60% / var(--colums));
+        margin:auto;
+        order:3
+    }
+    .don-hang{
+        width: calc(60% / var(--colums));
+        margin:auto;
+        order: 1;
+    }
+}
+@media (max-width: 766px){
+    .thongtin-muahang{
+        flex-direction: column !important;;
+         --colums:1;
+    }
+    .thong-tin{
+        width: calc(100% / var(--colums));
+        margin:auto;
+        order:2
+        
+    }
+    .van-chuyen{
+        width: calc(100% / var(--colums));
+        margin:auto;
+        order:3
+    }
+    .don-hang{
+        width: calc(100% / var(--colums));
+        margin:auto;
+        order: 1;
+    }
+}

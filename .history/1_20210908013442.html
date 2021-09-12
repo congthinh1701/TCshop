@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        p {
+            text-transform: capitalize !important;
+        }
+    </style>
+</head>
+<body>
+    <input type="radio" name="myRadios" onclick="handleClick(this);" value="1" />
+    <input type="radio" name="myRadios" onclick="handleClick(this);" value="2" />
+    <p>LUONG CONG THINH</p>
+    <p>Click the following button, you will be redirected to home page.</p>
+
+      <form>
+         <input type="button" value="Redirect Me" onclick="Redirect();" />
+      </form>
+    <script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+var currentValue = 0;
+function handleClick(myRadio) {
+    
+    currentValue = myRadio.value;
+    console.log(currentValue)
+}
+$(function() {
+      var url = "some_url";
+      $.ajax(url,
+      {
+         if (statusCode == 200) {
+           document.location.href = url;
+         }
+         else {
+           alert('Incorrect password')
+         }
+      }
+   });   
+});
+    </script>
+</body>
+</html>

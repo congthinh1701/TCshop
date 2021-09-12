@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.css">
+    <link rel="stylesheet" href="sass/style.css">
+</head>
+<body>
+    <div id="headerID"> <!-- your header --> </div>
+    <div class="container admin">
+        <div class="trang-tai-khoan">
+            <h5>TRANG TÀI KHOẢN</h5>
+            <div class="trang-tai-khoan-hello" id="hello">
+                <!--<p>Xin chào, <span>Lương Thịnh !</span></p>-->
+            </div>
+            <div class="trang-tai-khoan-thong-tin left active">
+                <p>Thông tin tài khoản</p>
+            </div>
+            <div class="trang-tai-khoan-hello left">
+                <p>Đơn hàng của bạn</p>
+            </div>
+            <div class="trang-tai-khoan-hello left">
+                <p>Đổi mật khẩu</p>
+            </div>
+        </div>
+        <div class="thong-tin-tai-khoan">
+            
+            <div class="thong-tin-tai-khoan-name right  active" id="thong-tin">
+                <h5>THÔNG TIN TÀI KHOẢN</h5>
+               <!--
+                    <p><span>Họ tên: </span>Lương Thịnh1</p>
+                <p><span>Email: </span>congthinhdt@gmail.com</p>
+                <p><span>Điện thoại: </span>0899874690</p>
+                <p><span>Địa chỉ: </span>200 hồng lạc</p>
+               -->
+            </div>
+            <div class="thong-tin-tai-khoan-name right">
+                <h5>ĐƠN HÀNG CỦA BẠN</h5>
+                <table>
+                    <caption>Cảm ơn bạn đã sử dụng sản phẩm của chúng tôi.Chúng tôi sẽ giao hàng trong thời gian sớm nhất.</caption>
+                    <caption>Thank you very much !</caption>
+                    <thead>
+                      <tr>
+                       <!-- <th scope="col" class="header">Ảnh sản phẩm</th>
+                        <th scope="col" class="header">Tên sản phẩm</th>-->
+                        <th scope="col" class="header">Địa chỉ</th>
+                        <th scope="col" class="header">Tổng đơn hàng</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr  id="table">
+                       
+                        
+                      </tr>      
+                    </tbody>
+                  </table>
+            </div>
+            <div class="thong-tin-tai-khoan-name right">
+                <p><span>Họ tên: </span>Lương 3 </p>
+                <p><span>Email: </span>congthinhdt@gmail.com</p>
+                <p><span>Điện thoại: </span>0899874690</p>
+                <p><span>Địa chỉ: </span>200 hồng lạc</p>
+            </div>
+            
+        </div>
+    </div>
+    <div id="footerID"> <!-- your header --> </div>
+    <script src="assets/js/product.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="assets/js/thongtintaikhoan.js"></script>
+    <script>
+        $("#headerID").load("header.html");
+        $("#footerID").load("footer.html");
+    </script>
+    
+</body>
+</html>

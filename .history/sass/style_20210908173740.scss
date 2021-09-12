@@ -1,0 +1,75 @@
+
+$text-fontSize:17px;
+$text-fontSizeTK:19px;
+$fontWeight:500;
+
+.admin{
+    display:flex;
+    --columns:2;
+    margin-top: 50px;
+    @media (max-width: 923px) {
+        --columns:1;
+        display:unset;
+        margin-top: 40px;
+        .trang-tai-khoan{
+            width: calc(100% / var(--columns));
+            margin: 50px;
+        }
+        .thong-tin-tai-khoan{
+            width: calc(100% / var(--columns));
+            margin: 50px;
+        }
+    }
+    @media (max-width: 623px) {
+        .trang-tai-khoan{
+            width: calc(100% / var(--columns));
+            margin: 10px 0 0 10px;
+            h5{
+                font-size: 90%;
+            }
+            p{
+                font-size: 15px;
+            }
+        }
+        .thong-tin-tai-khoan{
+            width: calc(100% / var(--columns));
+            margin:20px 0 -20px 10px;
+            h5{
+                font-size: 90%;
+            }
+            p{
+                font-size: 16px;
+            }
+        }
+       
+    }
+}
+.trang-tai-khoan{
+    width: calc(100% / var(--columns) - 20%);
+    p{
+        font-size: $text-fontSize;
+        &:hover{
+            color: #ffac4b;
+        }
+        span{
+            color: #ffac4b;
+        }
+    }   
+    &-thong-tin{
+        margin-top:25px
+    }
+    .active {
+        color: #ffac4b;
+    }
+}
+.thong-tin-tai-khoan{
+    width: calc(100% / var(--columns) + 20%);
+    p{
+        font-size: $text-fontSizeTK;
+        span{
+            font-weight: $fontWeight;
+        }
+    }
+}
+
+

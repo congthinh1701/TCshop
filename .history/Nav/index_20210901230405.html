@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="../fontawesome-free-5.15.4-web/css/all.css" rel="stylesheet">
+</head>
+<body>
+        <div class="main">
+            <div class="nav">
+
+                <!-- Nav PC -->
+                <nav class="nav__pc">
+                    <ul class="nav__list">
+                        <li>
+                            <a href="" class="nav__link">Home</a>
+                        </li>
+                        <li>
+                            <a href="" class="nav__link">About</a>
+                        </li>
+                        <li>
+                            <a href="" class="nav__link">Category</a>
+                        </li>
+                        <li>
+                            <a href="" class="nav__link">News</a>
+                        </li>
+                        <li>
+                            <a href="" class="nav__link">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+                <label for="nav-mobile-input" class="nav__bars-btn">
+                    <i class="fas fa-bars"></i>
+                </label> 
+                <input hidden type="checkbox" name="" class="nav__input" id="nav-mobile-input">
+
+                <label for="nav-mobile-input" class="nav__overlay"></label>
+
+                <nav class="nav__mobile">
+                    <label for="nav-mobile-input" class="nav__mobile-close">
+                        <i class="fas fa-times"></i>
+                    </label>
+                    <ul class="nav__mobile-list">
+                        <li>
+                            <a href="" class="nav__mobile-link">Home</a>
+                        </li>
+                        <li>
+                            <a href="" class="nav__mobile-link">About</a>
+                        </li>
+                        <li>
+                            <a href="" class="nav__mobile-link">Category</a>
+                        </li>
+                        <li>
+                            <a href="" class="nav__mobile-link">News</a>
+                        </li>
+                        <li>
+                            <a href="" class="nav__mobile-link">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            
+           
+        </div>
+        
+
+        <script>
+
+            var product={
+                product1:[
+                    {   
+                        id:1,
+                        name:'áo khoác',
+                        price:1200,
+                        sanxuat:'VN'
+                    },
+                    {   
+                        id:2,
+                        name:'áo khoác',
+                        price:1200,
+                        sanxuat:'VN'
+                    },
+                    {   
+                        id:3,
+                        name:'áo khoác',
+                        price:1200,
+                        sanxuat:'VN'
+                    }
+                ],
+                product2:[
+                    {   
+                        id:4,
+                        name:'áo khoác',
+                        price:1200,
+                        sanxuat:'VN'
+                    },
+                    {   
+                        id:5,
+                        name:'áo khoác',
+                        price:1200,
+                        sanxuat:'VN'
+                    },
+                    {   
+                        id:6,
+                        name:'áo khoác',
+                        price:1200,
+                        sanxuat:'VN'
+                    }
+                ]
+            }
+            
+            localStorage.setItem('thinh',JSON.stringify(product))
+            var get=JSON.parse(localStorage.getItem('thinh'))
+            console.log(get.product1)
+            for (var i in get){
+                //console.log(get.product1)
+            }
+
+            for(var i in product ){
+                //console.log( product[i])
+            }
+            var b=product.product1
+            //var bb=Object.keys(b)
+            var {product1,product2}=product
+            //console.log(product1)
+            for(var i in b){
+                //console.log(a,b,c)
+            }
+
+            
+        </script>
+</body>
+</html>

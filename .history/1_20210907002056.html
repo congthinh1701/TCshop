@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Lấy giá trị của checkbox</h2>
+    <p>Gender</p>
+    <input type="radio" id="gender0" name="gender" value="Male">Male<br>
+    <input type="radio" id="gender1" name="gender" value="Female">Female<br>
+        <script language="javascript">
+ 
+            
+    var gender = document.querySelector('input[name = "gender"]:checked').value;
+    document.writeln("You entered " + gender + " for your gender<br>");
+    console.log(gender);)
+        
+ 
+        </script>
+</body>
+</html>

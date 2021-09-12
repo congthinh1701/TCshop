@@ -1,0 +1,15 @@
+:root{
+    --primary-color:#EE4D2D;
+    --primary-color-rgba:rgb(238,75,43);
+    --white-color:#fff;
+    --black-color:#000;
+    --text-color:#333333;
+    --font-weight:700;
+    --font-size-product:19px;
+    --font--product:19px;
+    --font-size-price:18px;
+    --header-height:120px;
+    --navbar-height:34px;
+    --header-with-search-height:calc(var(var(--header-height)-var(var(--navbar-height))))
+
+}

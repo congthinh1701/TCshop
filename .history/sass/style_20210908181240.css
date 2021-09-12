@@ -1,0 +1,163 @@
+.admin {
+  display: flex;
+  --columns:2;
+  margin-top: 50px;
+}
+@media (max-width: 923px) {
+  .admin {
+    --columns:1;
+    display: unset;
+    margin-top: 40px;
+  }
+  .admin .trang-tai-khoan {
+    width: calc(100% / var(--columns));
+    margin: 50px;
+  }
+  .admin .thong-tin-tai-khoan {
+    width: calc(100% / var(--columns));
+    margin: 50px;
+  }
+}
+@media (max-width: 623px) {
+  .admin .trang-tai-khoan {
+    width: calc(100% / var(--columns));
+    margin: 10px 0 0 10px;
+  }
+  .admin .trang-tai-khoan h5 {
+    font-size: 90%;
+  }
+  .admin .trang-tai-khoan p {
+    font-size: 15px;
+  }
+  .admin .trang-tai-khoan-thong-tin {
+    margin-top: 15px;
+  }
+  .admin .thong-tin-tai-khoan {
+    width: calc(100% / var(--columns));
+    margin: 20px 0 -20px 10px;
+  }
+  .admin .thong-tin-tai-khoan h5 {
+    font-size: 90%;
+  }
+  .admin .thong-tin-tai-khoan p {
+    font-size: 17px;
+  }
+}
+
+.trang-tai-khoan {
+  width: calc(100% / var(--columns) - 20%);
+}
+.trang-tai-khoan p {
+  font-size: 17px;
+}
+.trang-tai-khoan p:hover {
+  color: #ffac4b;
+}
+.trang-tai-khoan p span {
+  color: #ffac4b;
+}
+.trang-tai-khoan-thong-tin {
+  margin-top: 25px;
+}
+.trang-tai-khoan .active {
+  color: #ffac4b;
+}
+
+.thong-tin-tai-khoan {
+  width: calc(100% / var(--columns) + 20%);
+}
+.thong-tin-tai-khoan p {
+  font-size: 19px;
+}
+.thong-tin-tai-khoan p span {
+  font-weight: 500;
+}
+.thong-tin-tai-khoan .right {
+  display: none;
+}
+.thong-tin-tai-khoan .right.active {
+  display: block;
+}
+
+
+table {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
+  }
+  
+  table caption {
+    font-size: 1.5em;
+    margin: .5em 0 .75em;
+  }
+  
+  table tr {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: .35em;
+  }
+  
+  table th,
+  table td {
+    padding: .625em;
+    text-align: center;
+  }
+  
+  table th {
+    font-size: .85em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+  }
+  
+  @media screen and (max-width: 600px) {
+    table {
+      border: 0;
+    }
+  
+    table caption {
+      font-size: 1.3em;
+    }
+    
+    table thead {
+      border: none;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+    
+    table tr {
+      border-bottom: 3px solid #ddd;
+      display: block;
+      margin-bottom: .625em;
+    }
+    
+    table td {
+      border-bottom: 1px solid #ddd;
+      display: block;
+      font-size: .8em;
+      text-align: right;
+    }
+    
+    table td::before {
+      /*
+      * aria-label has no advantage, it won't be read inside a table
+      content: attr(aria-label);
+      */
+      content: attr(data-label);
+      float: left;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    
+    table td:last-child {
+      border-bottom: 0;
+    }
+  }
+/*# sourceMappingURL=style.css.map */

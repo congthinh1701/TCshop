@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Lấy giá trị của checkbox</h2>
+    <p>Gender</p>
+    <input type="radio" id="gender0" name="gender" value="Male">Male<br>
+    <input type="radio" id="gender1" name="gender" value="Female">Female<br>
+        <script language="javascript">
+ 
+            
+                var checkbox = document.getElementsByName("gender");
+                var a;
+                for (var i = 0; i < checkbox.length; i++){
+                    if (checkbox[i].checked === true){
+                        ///alert(checkbox[i].value);
+                        a=checkbox[i].value
+                        console.log(a)
+                    }
+                    document.getElementById('btn1').innerHTML=a
+                }
+        
+ 
+        </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+
+
+
+.tintuc{
+    text-align: center;
+    margin-top: 20px;
+    &-header h2{
+        font-weight: 700;
+    }
+    &-footer{
+        font-size: 20px;
+    }
+
+}
+.content{
+    display:grid;
+    grid-gap: 35px; 
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr)); 
+}

@@ -1,0 +1,21 @@
+
+$text-color:red;
+$text-fontSize:20px;
+$text-fontSizeTK:22px;
+$fontWeight:500;
+
+.admin{
+    display:flex;
+    --columns:2;
+    margin-top: 50px;
+}
+.trang-tai-khoan{
+    width: calc(100% / var(--columns) - 20%);
+
+    
+}
+.thong-tin-tai-khoan{
+    width: calc(100% / var(--columns) + 20%);
+    
+}
+

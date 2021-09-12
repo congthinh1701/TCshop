@@ -1,0 +1,22 @@
+
+
+.thongtin-muahang{
+    display: flex;
+    --colums:3;
+   
+}
+.thong-tin{
+    width: calc(100% / var(--colums));
+    margin-left: 50px;
+}
+.van-chuyen{
+    height: 300px;
+    background-color: blueviolet;
+    width: calc(100% / var(--colums));
+
+}
+.don-hang{
+    background-color: brown;
+    height: 300px;
+    width: calc(100% / var(--colums));
+}

@@ -1,0 +1,82 @@
+.no-support {
+    text-align: center;
+    padding: 5px;
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #ee6620;
+    color: #fff;
+    font-size: 16px;
+  }
+  
+  @supports(scroll-snap-type: y mandatory) {
+    .no-support {
+      display: none;
+    }
+  }
+  
+  .example-wrapper {
+    text-align: center;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .container {
+    width: 320px;
+    height: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #333;
+    overflow: scroll;
+    position: relative;
+  }
+  
+  
+  
+  .x-mandatory {
+    scroll-snap-type: x mandatory;
+  }
+  
+  
+  
+  .both-mandatory {
+    scroll-snap-type: both mandatory;
+  }
+  
+  .x-proximity {
+    scroll-snap-type: x proximity;
+  }
+  
+  .y-proximity {
+    scroll-snap-type: y proximity;
+  }
+  
+  .both-proximity {
+    scroll-snap-type: both proximity;
+  }
+  
+  /* Below here just styles the container & elements so they look nice */
+  .x-scroll .wrapper {
+    width: 1240px;
+  }
+  
+  .x-scroll .element {
+    float: left;
+    margin-right: 10px;
+  }
+  
+  
+  .y-scroll .element {
+    margin-bottom: 10px;
+  }
+  
+  .both-scroll .wrapper {
+    width: 620px;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 300px 300px;
+    grid-gap: 10px;
+  }

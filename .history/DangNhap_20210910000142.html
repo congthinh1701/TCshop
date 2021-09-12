@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/DangKy.css">
+    <script type="text/javascript">
+
+        function Redirect() {
+            window.location = "home.html";
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <div class="main">
+
+        <form action="ThongTinTaiKhoan.html" class="form" id="form-1">
+            <h3 class="heading">Thành viên đăng nhập</h3>
+
+            <div class="spacer"></div>
+            <div class="form-group">
+                <label for="email" class="form-label">Email</label>
+                <input id="email" name="email" type="text" placeholder="VD: email@.com" class="form-control">
+                <span class="form-message"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="password" class="form-label">Mật khẩu</label>
+                <input id="password" name="password" type="password" placeholder="Nhập mật khẩu" class="form-control">
+                <span class="form-message"></span>
+            </div>
+
+            <button class="form-submit" style="margin-bottom:20px">Đăng Nhập</button>
+
+            <a href="DangKy.html" style="font-size: 18px;">Đăng ký tại đây</a>
+
+        </form>
+
+    </div>
+    <script src="assets/js/product.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <script>
+
+        Validator({
+            form: '#form-1',
+            errorSelector: '.form-message',
+            rules: [
+                //Validator.isRequired('#fullname', 'Vui lòng nhập tên đầy đủ'),
+                Validator.isRequired('#email'),
+                Validator.isRequired('#password'),
+                //Validator.isEmail('#email'),
+                //Validator.minLength('#password',6),
+                //Validator.isRequired('#password_confirmation'),
+                //Validator.isConfirmed('#password_confirmation',function(){
+                //return document.querySelector('#form-1 #password').value;
+                //},'Mật khẩu nhập lại không chính xác')
+                Validator.DangNhapEmail('#email', function () {
+                    
+                    const TaiKhoanMatKhau = createStorage('ThongTinDangKy')
+                    var ThongTin = TaiKhoanMatKhau.get('ThongTinDangKy')
+                    console.log(ThongTin)
+                    for (var i in ThongTin) {
+                        var a= ThongTin[i]
+                        console.log(a)
+                       // return email = ThongTin[i].email
+                    }
+                    console.log(ThongTin)
+                    return ThongTin
+                }),
+                Validator.DangNhapPassword('#password', function () {
+                    const TaiKhoanMatKhau = createStorage('ThongTinDangKy')
+                    var ThongTin = TaiKhoanMatKhau.get('ThongTinDangKy')
+                    for (var i in ThongTin) {
+                        return password = ThongTin[i].password
+                    }
+                })
+            ],
+            onSubmit: function (data) {
+                console.log(data);
+            }
+        });
+
+
+    </script>
+
+</body>
+
+</html>

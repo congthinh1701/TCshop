@@ -1,0 +1,194 @@
+
+$text-fontSize:17px;
+$text-fontSizeTK:19px;
+$fontWeight:500;
+
+.admin{
+    display:flex;
+    --columns:2;
+    margin-top: 50px;
+    @media (max-width: 923px) {
+        --columns:1;
+        display:unset;
+        margin-top: 40px;
+        .trang-tai-khoan{
+            width: calc(100% / var(--columns));
+            margin: 50px;
+        }
+        .thong-tin-tai-khoan{
+            width: calc(100% / var(--columns) - 100px);
+            margin: 50px;
+        }
+    }
+    @media (max-width: 623px) {
+        .trang-tai-khoan{
+            width: calc(100% / var(--columns));
+            margin: 10px 0 0 10px;
+            h5{
+                font-size: 90%;
+            }
+            p{
+                font-size: 15px;
+            }
+            &-thong-tin{
+                margin-top:15px
+            }
+        }
+        .thong-tin-tai-khoan{
+            width: calc(100% / var(--columns) - 50px);
+            margin:20px 20px -20px 10px;
+            h5{
+                font-size: 90%;
+            }
+            p{
+                font-size: 17px;
+            }
+        }
+       
+    }
+}
+.trang-tai-khoan{
+    width: calc(100% / var(--columns) - 25%);
+    p{
+        font-size: $text-fontSize;
+        &:hover{
+            color: #ffac4b;
+        }
+        span{
+            color: #ffac4b;
+        }
+    }   
+    &-thong-tin{
+        margin-top:25px
+    }
+    .active {
+        color: #ffac4b;
+    }
+}
+.thong-tin-tai-khoan{
+    width: calc(100% / var(--columns) + 25%);
+    p{
+        font-size: $text-fontSizeTK;
+        span{
+            font-weight: $fontWeight;
+        }
+    }
+    .right{
+        display: none;
+    }
+    .right.active{
+        display: block;
+    }
+}
+
+table {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
+  }
+  
+  table caption {
+    font-size: 1.2em;
+    color: #ffac4b;
+    font-weight: 500;
+  }
+  
+  table tr {
+   
+    border: 1px solid #ddd;
+    padding: .35em;
+    img{
+        width: 80px;
+        height: 90px;
+    }
+  }
+  
+  table th,
+  table td {
+    padding: .625em;
+    text-align: center;
+    border:1px solid aqua;
+    font-size:22px;
+    font-weight: 500;
+  }
+  
+  table th {
+    font-size: .85em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    background-color: #ffac4b;
+  }
+  table td {
+   padding: 25px 0 25px 0;
+  }
+  
+  @media screen and (max-width: 600px) {
+    table {
+      border: 1;
+    }
+  
+    table caption {
+      font-size: 1.3em;
+    }
+    
+    table thead {
+      border: none;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+    
+    table tr {
+      display: block;
+      margin-bottom: .625em;
+    }
+    
+    table td {
+        
+      display: block;
+      font-size: .8em;
+      text-align: right;
+    }
+    
+    table td::before {
+      /*
+      * aria-label has no advantage, it won't be read inside a table
+      content: attr(aria-label);
+      */
+      content: attr(data-label);
+      float: left;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    
+    table td:last-child {
+      border-bottom: 0;
+    }
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /* general styling */
+  body {
+    font-family: "Open Sans", sans-serif;
+    line-height: 1.25;
+  }
+

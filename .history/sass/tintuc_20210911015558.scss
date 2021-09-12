@@ -1,0 +1,41 @@
+
+
+
+.tintuc{
+    text-align: center;
+    margin-top: 20px;
+    &-header h2{
+        font-weight: 700;
+    }
+    &-footer{
+        font-size: 20px;
+    }
+
+}
+.content{
+    display:grid;
+    grid-gap: 30px; 
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+
+    .content1{
+        &-img img{
+            width: 100%;
+            height: 100%;
+        }
+        &-footer{
+            
+        }
+    }
+    .content2{
+        &-img img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .content3{
+        &-img img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

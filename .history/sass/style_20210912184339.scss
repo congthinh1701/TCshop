@@ -1,0 +1,256 @@
+
+$text-fontSize:17px;
+$text-fontSizeTK:19px;
+$fontWeight:500;
+
+.admin{
+    display:flex;
+    --columns:2;
+    margin-top: 50px;
+    @media (max-width: 923px) {
+        --columns:1;
+        display:unset;
+        margin-top: 40px;
+        .trang-tai-khoan{
+            width: calc(100% / var(--columns));
+            margin: 50px;
+        }
+        .thong-tin-tai-khoan{
+            width: calc(100% / var(--columns) - 100px);
+            margin: 50px;
+        }
+    }
+    @media (max-width: 623px) {
+        .trang-tai-khoan{
+            width: calc(100% / var(--columns));
+            margin: 10px 0 0 10px;
+            h5{
+                font-size: 120%;
+            }
+            p{
+                font-size: 20px;
+            }
+            &-thong-tin{
+                margin-top:15px;
+              
+            }
+        }
+        .thong-tin-tai-khoan{
+            width: calc(100% / var(--columns) - 50px);
+            margin:40px 20px -20px 10px;
+            h5{
+                font-size: 120%;
+            }
+            p{
+                font-size: 20px;
+            }
+            label{
+              font-size:22px
+            }
+            input{
+              width: 100%;
+              height: 50px;
+            }
+        }
+       
+    }
+}
+.trang-tai-khoan{
+    width: calc(100% / var(--columns) - 25%);
+    p{
+        font-size: $text-fontSize;
+        &:hover{
+            color: #ffac4b;
+        }
+        span{
+            color: #ffac4b;
+        }
+    }   
+    &-thong-tin{
+        margin-top:25px
+    }
+    .active {
+        color: #ffac4b;
+    }
+}
+.thong-tin-tai-khoan{
+    width: calc(100% / var(--columns) + 25%);
+    p{
+        font-size: $text-fontSizeTK;
+        span{
+            font-weight: $fontWeight;
+        }
+    }
+    .right{
+        display: none;
+    }
+    .right.active{
+        display: block;
+    }
+    &-name .form-control{
+      width: 300px;
+    }
+    &-name .form-group .form-message{
+      color:red;
+    }
+    &-name .form-group label{
+      margin-top:10px
+    }
+    &-name button{
+      font-size: 20px;
+      background-color: #ffac4b;
+      width: 200px;
+    }
+    &-name button:hover{
+      font-size: 20px;
+      color: #fff;
+      background-color: #000;
+    }
+}
+
+table {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
+  }
+  
+  table caption {
+    font-size: 1.2em;
+    color: #ffac4b;
+    font-weight: 500;
+  }
+  
+  table tr {
+   
+    border: 1px solid #ddd;
+    padding: .35em;
+    img{
+        width: 80px;
+        height: 90px;
+    }
+  }
+  
+  table th,
+  table td {
+    padding: .625em;
+    text-align: center;
+    border:1px solid aqua;
+    font-size:22px;
+    font-weight: 500;
+  }
+  
+  table th {
+    font-size: .85em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    background-color: #ffac4b;
+  }
+  table td {
+   padding: 25px 0 25px 0;
+  }
+  
+  @media screen and (max-width: 600px) {
+    
+    tbody {
+      background-color: #ffac4b;
+      width: 100%;
+    }
+    table{
+      width: 100%;
+    }
+    table caption {
+      font-size: 1.2em;
+    }
+    
+    table thead {
+        
+      clip: rect(0 0 0 0);
+      height: 1px;
+      overflow: hidden;
+      border: 1px solid black;
+      position: absolute;
+      width: 1px;
+    }
+    
+    table tr {
+      display: block;
+      margin-bottom: .625em;
+      text-align: right;
+      font-weight: bold;
+      width: 100%;
+      border: 1px solid black;
+    }
+    
+    table td {
+    
+      display: block;
+      font-size: .8em;
+      font-weight: bold;
+      font-size:20px;
+      text-align: right;
+    // margin-right: 10px;
+      border: 1px solid black;
+      padding-right: 20px;
+
+    }
+    
+    table td::before {
+      /*
+      * aria-label has no advantage, it won't be read inside a table
+      content: attr(aria-label);
+      */
+      content: attr(data-label);
+      float: left;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 18px;
+      border:none;
+     
+    }
+    
+    table td:last-child {
+      border: 1px solid black;
+      padding-right: 20px;
+    }
+  }
+  
+  .Empy{
+    display:none;
+    margin-top: 40px;
+    p{
+      font-size:30px;
+      color: #ffac4b;
+    }
+    a{
+      text-decoration: none;
+      font-size:25px;
+      color: #000;
+    }
+    :hover{
+      color: #ffac4b;
+      text-decoration: none;
+    }
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /* general styling */
+  body {
+    font-family: "Open Sans", sans-serif;
+    line-height: 1.25;
+  }
+

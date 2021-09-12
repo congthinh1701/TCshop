@@ -1,0 +1,10 @@
+.tintuc {
+  margin: auto;
+  text-align: center;
+  margin-top: 20px;
+  &-header{
+      font-weight: 600;
+  }
+}
+
+/*# sourceMappingURL=tintuc.css.map */
